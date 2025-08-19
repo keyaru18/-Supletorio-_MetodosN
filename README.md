@@ -4,16 +4,16 @@
 
 ![alt text](images/image.png)
  ```python
- import numpy as np
+import numpy as np
 from scipy.optimize import bisect, newton
 
 # Definir la función
 def f(x):
-    return x**5 + 5.5 * x**4 + 4.5 * x**3 - 9.5 * x**2 - 15.5 * x - 6
+    return x**5 -34.5 * x**4 + 384.5 * x**3 - 1559 * x**2 +2646 * x - 1612
 
 # Definir la derivada para el método de Newton
 def df(x):
-    return 5 * x**4 + 22 * x**3 + 13.5 * x**2 - 19 * x - 15.5
+    return 5*x**4 - 138.0*x**3 + 1153.5*x**2 - 3118*x + 2646
 
 # Intervalos iniciales para el método de bisección basados en un gráfico aproximado
 intervals = [(-4, -3), (-2.5, -1.5), (-1, 0), (0, 1), (1, 2), (2, 3)]
@@ -36,7 +36,6 @@ roots = sorted(np.round(roots, 3))
 for i, root in enumerate(roots, 1):
     print(f"x{i} = {root}")
  ```
- ![alt text](images/image-1.png)
 
  ---
 
@@ -319,6 +318,13 @@ plt.tight_layout()
 plt.show()
 ````
 ````
+
+
+
+
+
+
+
 
 
 - Gráfico de la parte 1 al modificar estimación inicial
